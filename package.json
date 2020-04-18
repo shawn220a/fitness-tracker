@@ -1,0 +1,30 @@
+{
+  "name": "fitness-tracker",
+  "version": "1.0.0",
+  "description": "Allows the user to track their fitness",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawn220a/fitness-tracker.git"
+  },
+  "author": "Shawn Tschoepe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawn220a/fitness-tracker/issues"
+  },
+  "homepage": "https://github.com/shawn220a/fitness-tracker#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "morgan": "^1.10.0"
+  }
+}
