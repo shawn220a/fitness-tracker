@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 8080;
 mongoose.connect(mongoDBURL, {
   useNewUrlParser: true,
   useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 
 app.use(express.urlencoded({ extended: true }));
@@ -18,8 +19,8 @@ app.use(express.json());
 
 app.use(express.static('./public'));
 
-require('./routes/api')(app);
-require('./routes/html')(app);
+app.use(require('./routes/api'));
+app.use(require('./routes/html'));
 
 app.listen(PORT, () => {
   console.log(`Server listening on: http://localhost:${PORT}`);
