@@ -32,4 +32,4 @@ const exerciseSchema = new Schema({
 
 const Exercise = mongoose.model('Exercise', exerciseSchema);
 
-module.exports = Transaction;
+module.exports = Exercise;
